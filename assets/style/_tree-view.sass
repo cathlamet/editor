@@ -1,0 +1,78 @@
+
+
+.NodeCheckbox
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  width: 1rem
+  height: 1rem
+  border: 1px solid var(--demo-border-emphasized)
+  border-radius: 0.25rem
+  background: var(--demo-bg-checkbox)
+  color: var(--demo-coral-contrast)
+  cursor: pointer
+
+  &[data-state='checked'], &[data-state='indeterminate']
+    background: var(--demo-coral-solid)
+    border-color: var(--demo-coral-solid)
+
+  &:focus-visible
+    outline: 2px solid var(--demo-coral-focus-ring)
+    outline-offset: 2px
+
+  svg
+    width: 0.75rem
+    height: 0.75rem
+
+.NodeCheckboxIndicator
+  display: flex
+  align-items: center
+  justify-content: center
+
+.ActionGroup
+  display: flex
+  gap: 0.25rem
+  flex-shrink: 0
+  opacity: 0
+
+  :where(.BranchControl, .Item):hover &, :where(.BranchControl, .Item):focus-within &
+    opacity: 1
+
+.Action
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 1.25rem
+  height: 1.25rem
+  padding: 0
+  border: none
+  border-radius: 0.25rem
+  background: transparent
+  color: var(--demo-neutral-fg)
+  cursor: pointer
+  flex-shrink: 0
+
+  svg
+    width: 0.875rem
+    height: 0.875rem
+
+.NodeRenameInput
+  flex: 1
+  min-width: 0
+  height: 1.25rem
+  padding-inline: 0.25rem
+  padding-block: 0
+  margin-block: -1px
+  font-size: inherit
+  line-height: inherit
+  border: 1px solid var(--demo-coral-solid)
+  border-radius: 0.25rem
+  background: var(--demo-bg-popover)
+  color: var(--demo-neutral-fg)
+  outline: none
+  box-sizing: content-box
+
+  &:focus
+    outline: 2px solid var(--demo-coral-focus-ring)
+    outline-offset: -1px

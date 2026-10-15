@@ -1,0 +1,42 @@
+@use "sass:color"
+
+$bg-color: #C0C0C0
+$widget-color: #D4D0CD
+
+=retro-sunken-widget ($color: $widget-color)
+  $border-shadow: color.adjust($bg-color, $lightness: -50%)
+  $border-shadow-extra: rgba(0, 0, 0, 0.1)
+  $border-light: color.adjust($color, $lightness: 2%)
+  $border-dark: color.adjust($bg-color, $lightness: -25%)
+
+  background-color: $color
+  border: none
+  border-radius: 0px
+  box-shadow: inset 1px 1px 0px 0px $border-shadow, inset 2px 2px 2px 0px $border-shadow-extra, inset 0 1px 0 $border-dark, inset 1px 0 0 $border-dark, inset -2px 0 0 $border-light, inset 0 -2px 0 $border-light
+
+=retro-raised-widget ($color: $widget-color)
+  $border-shadow: color.adjust($bg-color, $lightness: -50%)
+  $border-shadow-extra: rgba(0, 0, 0, 0.2)
+  $border-light: color.adjust($color, $lightness: 15%)
+  $border-dark: color.adjust($bg-color, $lightness: -25%)
+
+  background-color: $color
+  border: none
+  border-radius: 0px
+  box-shadow: 1px 1px 0px 0px $border-shadow, 2px 2px 2px 0px $border-shadow-extra, inset 1px 1px 0px 0px $border-light, inset -1px -1px 0px 0px $border-dark
+
+=retro-raised-widget-disabled ($color: $widget-color)
+  $border-shadow: color.adjust($bg-color, $lightness: -30%)
+  $border-light: color.adjust($color, $lightness: 12%)
+  $border-dark: color.adjust($bg-color, $lightness: -15%)
+  $text-disabled: color.adjust($color, $lightness: -30%)
+  $text-highlight: color.adjust($color, $lightness: 25%)
+
+  background-color: $color
+  cursor: not-allowed
+  border: none
+  border-radius: 0px
+
+  box-shadow: 1px 1px 0px 0px $border-shadow, inset 1px 1px 0px 0px $border-light, inset -1px -1px 0px 0px $border-dark
+  color: $text-disabled
+  text-shadow: 1px 1px 0px $text-highlight

@@ -1,0 +1,72 @@
+
+@forward 'variables'
+@forward 'tree-view'
+
+html, body
+  background-color: #C0C0C0
+  font-family: system-ui, -apple-system, sans-serif
+  height: 100%
+  margin: 0
+  padding: 0
+  position: relative
+  overflow: hidden
+  width: 100%
+
+#__nuxt
+  width: 100%
+  height: 100%
+
+*, *::before, *::after
+  box-sizing: border-box
+
+
+@keyframes expand-height
+  from
+    height: 0
+  to
+    height: var(--height)
+
+@keyframes collapse-height
+  from
+    height: var(--height)
+  to
+    height: 0
+
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fade-out
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+@keyframes scale-fade-in
+  from
+    opacity: 0
+    transform: scale(0.96)
+  to
+    opacity: 1
+    transform: scale(1)
+
+@keyframes scale-fade-out
+  from
+    opacity: 1
+    transform: scale(1)
+  to
+    opacity: 0
+    transform: scale(0.96)
+
+input[type="text"]
+  &:disabled
+    cursor: not-allowed
+    opacity: 0.5

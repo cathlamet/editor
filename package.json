@@ -1,0 +1,31 @@
+{
+  "name": "@cathlamet/editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@ark-ui/vue": "^5.39.3",
+    "@cathlamet/bundler": "github:cathlamet/bundler",
+    "@cathlamet/library": "github:cathlamet/library",
+    "@lucide/vue": "^1.57.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "nuxt": "4.5.2",
+    "pug": "^3.0.4",
+    "sass-embedded": "^1.105.1",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "allowScripts": {
+    "github:cathlamet/bundler#8ce2a65b283d92f009773596641884f98f2abb50": true,
+    "github:cathlamet/library#9a42f7f6319b19a2cbbb85545121d930b582a3b1": true,
+    "esbuild@0.28.2": true,
+    "@parcel/watcher@2.6.0": true
+  }
+}
